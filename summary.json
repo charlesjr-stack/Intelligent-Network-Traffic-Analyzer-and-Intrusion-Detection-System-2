@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "total_packets": 553,
+    "total_bytes": 55632,
+    "duration_s": 59.5,
+    "by_protocol": {
+      "DNS": {
+        "packets": 18,
+        "bytes": 1440
+      },
+      "HTTP": {
+        "packets": 26,
+        "bytes": 3120
+      },
+      "HTTPS": {
+        "packets": 25,
+        "bytes": 5000
+      },
+      "ICMP": {
+        "packets": 28,
+        "bytes": 1792
+      },
+      "OTHER(47)": {
+        "packets": 3,
+        "bytes": 180
+      },
+      "TCP": {
+        "packets": 30,
+        "bytes": 1800
+      },
+      "UDP": {
+        "packets": 423,
+        "bytes": 42300
+      }
+    },
+    "top_sources": {
+      "10.0.0.5": 400,
+      "10.0.0.3": 46,
+      "10.0.0.4": 40,
+      "10.0.0.2": 34,
+      "10.0.0.9": 30
+    },
+    "top_destinations": {
+      "10.0.0.100": 507,
+      "10.0.0.1": 46
+    }
+  },
+  "alerts": [
+    {
+      "timestamp": 1700000020,
+      "rule": "HIGH_PACKET_RATE",
+      "severity": "High",
+      "src_ip": "10.0.0.5",
+      "detail": "400 packets in 5s window (threshold 100)"
+    },
+    {
+      "timestamp": 1700000040,
+      "rule": "POSSIBLE_PORT_SCAN",
+      "severity": "Medium",
+      "src_ip": "10.0.0.9",
+      "detail": "30 different destination ports in 5s"
+    },
+    {
+      "timestamp": 1700000050.0,
+      "rule": "UNEXPECTED_PROTOCOL",
+      "severity": "Low",
+      "src_ip": "10.0.0.7",
+      "detail": "3 OTHER(47) packets; not in allowed list"
+    }
+  ]
+}

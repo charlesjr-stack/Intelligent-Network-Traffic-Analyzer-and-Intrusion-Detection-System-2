@@ -1,0 +1,3 @@
+pandas
+matplotlib
+scapy   # optional, only for --live capture

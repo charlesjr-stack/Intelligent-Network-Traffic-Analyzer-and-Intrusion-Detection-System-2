@@ -1,0 +1,4 @@
+timestamp,rule,severity,src_ip,detail
+1700000020.0,HIGH_PACKET_RATE,High,10.0.0.5,400 packets in 5s window (threshold 100)
+1700000040.0,POSSIBLE_PORT_SCAN,Medium,10.0.0.9,30 different destination ports in 5s
+1700000050.0,UNEXPECTED_PROTOCOL,Low,10.0.0.7,3 OTHER(47) packets; not in allowed list

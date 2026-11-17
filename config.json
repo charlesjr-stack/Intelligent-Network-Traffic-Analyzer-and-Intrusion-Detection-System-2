@@ -1,0 +1,6 @@
+{
+  "window_seconds": 5,
+  "packet_rate_threshold": 100,
+  "port_scan_ports": 15,
+  "allowed_protocols": ["TCP", "UDP", "ICMP", "DNS", "HTTP", "HTTPS"]
+}
